@@ -31,7 +31,7 @@ jobs:
 
     - name: Restore Packages
       #run: nuget restore ClaimsWebApp/ClaimsWebApp.csproj
-      Update-Package -Project ClaimsWebApp
+      run: Update-Package -Project ClaimsWebApp
 
     - name: Build Solution
       run: |
