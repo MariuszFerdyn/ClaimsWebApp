@@ -30,11 +30,11 @@ jobs:
         dir
 
     - name: Restore Packages
-      run: nuget restore AADGuide-CodeSamples.sln
+      run: nuget restore ClaimsWebApp/ClaimsWebApp.csproj
 
     - name: Build Solution
       run: |
-        msbuild.exe AADGuide-CodeSamples.sln /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
+        msbuild.exe ClaimsWebApp/ClaimsWebApp.csproj /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
 
     - name: dir
       run: |
