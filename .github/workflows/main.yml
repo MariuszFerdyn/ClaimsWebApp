@@ -32,6 +32,13 @@ jobs:
     - name: Restore Packages
       run: nuget restore ClaimsWebApp/packages.config -PackagesDirectory D:\a\ClaimsWebApp\ClaimsWebApp\packages
 
+    - name: Restore Packages OData
+      run: install Microsoft.Data.OData -Version 5.7.0.0
+
+    - name: Restore Packages Owin 
+      run: Microsoft.Owin -Version 3.0.1.0
+
+
     - name: Build Solution
       run: |
         msbuild.exe AADGuide-CodeSamples.sln /target:ClaimsWebApp /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
