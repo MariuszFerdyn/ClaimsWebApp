@@ -36,7 +36,7 @@ jobs:
       run: nuget install Microsoft.Data.OData -Version 5.7.0.0
 
     - name: Restore Packages Owin 
-      run: nuget Microsoft.Owin -Version 3.0.1.0
+      run: nuget install Microsoft.Owin -Version 3.0.1.0
 
 
     - name: Build Solution
