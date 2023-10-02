@@ -30,14 +30,14 @@ jobs:
         dir
 
     - name: Restore Packages
-      run: nuget restore ClaimsWebApp/packages.config -PackagesDirectory $(GITHUB_WORKSPACE)\packages
+      run: nuget restore ClaimsWebApp/packages.config -PackagesDirectory D:\a\ClaimsWebApp\ClaimsWebApp\packages
 
     - name: Restore Packages OData
-      run: nuget install Microsoft.Data.OData -Version 5.7.0.0 -OutputDirectory $(GITHUB_WORKSPACE)\packages
+      run: nuget install Microsoft.Data.OData -Version 5.7.0.0 -OutputDirectory D:\a\ClaimsWebApp\ClaimsWebApp\packages
 
     - name: Restore Packages Owin 
       #run: nuget install Microsoft.Owin -Version 3.0.1.0 -OutputDirectory D:\a\ClaimsWebApp\ClaimsWebApp\packages
-      run: nuget install Microsoft.Owin -Version 3.0.1.0 -OutputDirectory $(GITHUB_WORKSPACE)\packages
+      run: nuget install Microsoft.Owin -Version 3.0.1.0 -OutputDirectory D:\a\ClaimsWebApp\ClaimsWebApp\packages
 
 
     - name: Build Solution
