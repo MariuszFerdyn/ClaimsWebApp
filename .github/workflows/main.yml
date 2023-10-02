@@ -30,7 +30,7 @@ jobs:
         dir
 
     - name: Restore Packages
-      run: nuget restore ClaimsWebApp/packages.config
+      run: nuget restore ClaimsWebApp/packages.config -SolutionDirectory
 
     - name: Build Solution
       run: |
