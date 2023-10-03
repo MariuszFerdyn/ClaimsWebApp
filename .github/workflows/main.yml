@@ -44,13 +44,19 @@ jobs:
       run: |
         msbuild.exe AADGuide-CodeSamples.sln /target:ClaimsWebApp /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
 
-    - name: dir
-      run: |
-        dir
-        
     - name: dir2
       run: |
         cd _build
         dir
         cd bin
         dir
+
+      - name: 'Az CLI login'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 'Run az commands'
+        shell: pwsh
+        run: |
+          az group list --out table
