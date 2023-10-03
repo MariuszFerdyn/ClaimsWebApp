@@ -59,8 +59,8 @@ jobs:
       shell: pwsh
       run: |
         $Region="West Europe"
-        $ResourceGroup="mftestweb3"
-        $WebResourceName="mftestweb3"
+        $ResourceGroup="mftestweb4"
+        $WebResourceName="mftestweb4"
         az webapp list-runtimes
         az group create -l $Region -n $ResourceGroup
         az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName --sku B1
