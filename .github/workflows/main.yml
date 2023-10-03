@@ -59,8 +59,8 @@ jobs:
       shell: pwsh
       run: |
         $Region="West Europe"
-        $ResourceGroup="mftestweb"
-        $WebResourceName="mftestweb"
+        $ResourceGroup="mftestweb2"
+        $WebResourceName="mftestweb2"
         az webapp list-runtimes
         az group create -l $Region -n $ResourceGroup
         az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName --sku B1
@@ -69,4 +69,4 @@ jobs:
         Compress-Archive -Path * -DestinationPath ..\app.zip
         cd ..
         dir
-        az webapp deploy --resource-group $ResourceGroup --name $WebResourceName --src-path <zip-package-path>
+        az webapp deploy --resource-group $ResourceGroup --name $WebResourceName --src-path app.zip
