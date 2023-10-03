@@ -66,4 +66,4 @@ jobs:
         az webapp list-runtimes
         az group create -l $Region -n $ResourceGroup
         az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName  --is-linux --sku B1
-        az webapp create -g $ResourceGroup -n $WebResourceName -p $WebResourceName --runtime "ASP.NET V4.8"
+        az webapp create -g $ResourceGroup -n $WebResourceName -p $WebResourceName --runtime "ASPNET:V4.8"
