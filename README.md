@@ -1,6 +1,9 @@
 ## AADGuide-CodeSamples
 Code Samples for AADGuide
 
+**This branch focus only on ClaimsWebApp  and deploy it to the App Service, that it is created as a part of the pipeline https://github.com/MariuszFerdyn/ClaimsWebApp/blob/master/.github/workflows/main.yml. After that just go to the Authentication Page and you can ADD Microsoft Entra Single Tenant or multitenant app.**
+
+
 ### Description
 There are the code samples for the Azure Active Directory Guide  
 Website: [https://aadguide.azurewebsites.net](http://aadguide.azurewebsites.net)  
