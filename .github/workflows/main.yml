@@ -48,14 +48,12 @@ jobs:
       run: |
         cd _build
         dir
-        cd bin
-        dir
 
     - name: 'Az CLI login'
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        #Add credentials like : http://chamindac.blogspot.com/2022/01/executing-azure-cli-commands-with.html
+        #Add credentials like: http://chamindac.blogspot.com/2022/01/executing-azure-cli-commands-with.html
 
     - name: 'Run az commands'
       shell: pwsh
@@ -67,3 +65,8 @@ jobs:
         az group create -l $Region -n $ResourceGroup
         az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName --sku B1
         az webapp create -g $ResourceGroup -n $WebResourceName -p $WebResourceName --runtime "ASPNET:V4.8"
+        dir
+        Compress-Archive -Path * -DestinationPath ..\app.zip
+        cd ..
+        dir
+        az webapp deploy --resource-group $ResourceGroup --name $WebResourceName --src-path <zip-package-path>
