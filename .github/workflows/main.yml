@@ -65,5 +65,5 @@ jobs:
         $WebResourceName="mftestweb"
         az webapp list-runtimes
         az group create -l $Region -n $ResourceGroup
-        az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName  --os windows --sku B1
+        az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName --sku B1
         az webapp create -g $ResourceGroup -n $WebResourceName -p $WebResourceName --runtime "ASPNET:V4.8"
