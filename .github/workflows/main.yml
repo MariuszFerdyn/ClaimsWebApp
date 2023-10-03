@@ -59,13 +59,14 @@ jobs:
       shell: pwsh
       run: |
         $Region="West Europe"
-        $ResourceGroup="mftestweb2"
-        $WebResourceName="mftestweb2"
+        $ResourceGroup="mftestweb3"
+        $WebResourceName="mftestweb3"
         az webapp list-runtimes
         az group create -l $Region -n $ResourceGroup
         az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName --sku B1
         az webapp create -g $ResourceGroup -n $WebResourceName -p $WebResourceName --runtime "ASPNET:V4.8"
         dir
+        cd _build
         Compress-Archive -Path * -DestinationPath ..\app.zip
         cd ..
         dir
