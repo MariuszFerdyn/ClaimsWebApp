@@ -51,12 +51,13 @@ jobs:
         cd bin
         dir
 
-      - name: 'Az CLI login'
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: 'Az CLI login'
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        #Add credentials like: http://chamindac.blogspot.com/2022/01/executing-azure-cli-commands-with.html
 
-      - name: 'Run az commands'
-        shell: pwsh
-        run: |
-          az group list --out table
+    - name: 'Run az commands'
+      shell: pwsh
+      run: |
+        az group list --out table
