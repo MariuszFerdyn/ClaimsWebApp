@@ -1,7 +1,7 @@
 ## AADGuide-CodeSamples
 Code Samples for AADGuide
 
-** This branch focus only on ClaimsWebApp  and deploy it to the App Service, that it is created as a part of the pipeline https://github.com/MariuszFerdyn/ClaimsWebApp/blob/master/.github/workflows/main.yml. After that just go to the Authentication Page and you can ADD Microsoft Entra Single Tenant or multitenant app. **
+** This branch focus only on ClaimsWebApp  and deploy it to the App Service, that it is created as a part of the pipeline https://github.com/MariuszFerdyn/ClaimsWebApp/blob/master/.github/workflows/main.yml. After that just go to the Authentication Page and you can ADD Microsoft Entra Single Tenant or Multitenant app. **
 
 
 ### Description
