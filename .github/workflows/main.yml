@@ -63,10 +63,6 @@ jobs:
         $Region="West Europe"
         $ResourceGroup="mftestweb"
         $WebResourceName="mftestweb"
-        $ClientResourceName="$(ClientResourceName)"
-        $SharedResourceName="$(SharedResourceName)"
-        $ClientResourceGroup="$(ClientResourceGroup)"
-        $SharedResourceGroup="$(SharedResourceGroup)"
         az group create -l $Region -n $ResourceGroup
         az appservice plan create -l $Region -g $ResourceGroup -n $WebResourceName  --is-linux --sku B1
         az webapp create -g $ResourceGroup -n $WebResourceName -p $WebResourceName
